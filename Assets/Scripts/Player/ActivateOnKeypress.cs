@@ -1,0 +1,51 @@
+﻿using System.Net.NetworkInformation;
+using UnityEngine;
+
+namespace Cinemachine.Examples
+{
+    public class ActivateOnKeypress : MonoBehaviour
+    {
+        public KeyCode ActivationKey = KeyCode.LeftControl;
+        public int PriorityBoostAmount = 10;
+        public GameObject Reticle;
+
+        Cinemachine.CinemachineVirtualCameraBase vcam;
+        bool boosted = false;
+
+        public Xingu xingu;
+
+        void Start()
+        {
+            vcam = GetComponent<Cinemachine.CinemachineVirtualCameraBase>();
+        }
+
+        void Update()
+        {
+#if ENABLE_LEGACY_INPUT_MANAGER
+            if (vcam != null)
+            {
+                if (Input.GetKey(ActivationKey) && xingu.archerMode)
+                {
+                    if (!boosted)
+                    {
+                        vcam.Priority += PriorityBoostAmount;
+                        boosted = true;
+                    }
+                }
+                else if (boosted)
+                {
+                    vcam.Priority -= PriorityBoostAmount;
+                    boosted = false;
+                }
+
+            }
+
+            if (Reticle != null)
+                Reticle.SetActive(boosted);
+#else
+        InputSystemHelper.EnableBackendsWarningMessage();
+#endif
+            
+        }
+    }
+}
