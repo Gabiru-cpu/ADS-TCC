@@ -189,6 +189,7 @@ public class Xingu : MonoBehaviour
 
     private void Update()
     {
+
         //atualizar vida
         healthBar.value = health;
 

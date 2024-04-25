@@ -287,8 +287,20 @@ namespace PauseManagement.Core
 		// Update is called once per frame
 		void Update()
 		{
+            /*if (!IsPaused)
+			{
+                Cursor.lockState = CursorLockMode.Locked;  // Trava o cursor no meio da tela OBS: para destravar troque para .None;
+                Cursor.visible = false;  // Torna o cursor invisível OBS: para deixar visivel troque por true
+            }                
+			else 
+			{
+                Cursor.lockState = CursorLockMode.Locked;  // Trava o cursor no meio da tela OBS: para destravar troque para .None;
+                Cursor.visible = false;  // Torna o cursor invisível OBS: para deixar visivel troque por true
+            }*/
+                
+
 #if !PAUSE_MANAGER_INPUT_SYSTEM
-			useUnityInputSystem = false;
+            useUnityInputSystem = false;
 #endif
 
 			if (useUnityInputSystem) return;
@@ -370,7 +382,11 @@ namespace PauseManagement.Core
 
 		public void Pause()
 		{
-			if (useTimeScale)
+            // essa parte foi editado por mim:
+            Cursor.lockState = CursorLockMode.None;  // Trava o cursor no meio da tela OBS: para destravar troque para .None;
+            Cursor.visible = true;  // Torna o cursor invisível OBS: para deixar visivel troque por true
+
+            if (useTimeScale)
 				StopTime();
 
 			IsPaused = true;
@@ -384,7 +400,11 @@ namespace PauseManagement.Core
 
 		public void Resume()
 		{
-			ResetTime();
+            // essa parte foi editado por mim:
+            Cursor.lockState = CursorLockMode.Locked;  // Trava o cursor no meio da tela OBS: para destravar troque para .None;
+            Cursor.visible = false;  // Torna o cursor invisível OBS: para deixar visivel troque por true
+
+            ResetTime();
 
 			IsPaused = false;
 

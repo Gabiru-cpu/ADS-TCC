@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c4f5c275bbd93409b0a7c5cc5df5eb, type: 3}
+  m_Name: GlossarioData
+  m_EditorClassIdentifier: 
+  glossaryScript:
+  - name: Raoni
+    description: "Jovem protagonista em sua jornada a procura de seu irm\xE3o."
+    image: {fileID: 21300000, guid: df4f2174bded1f843917b90b8adebbc0, type: 3}
+  - name: Ubirajara
+    description: Espirito indigena ancestral de Raoni que se junta a ele para ajudar.
+    image: {fileID: 21300000, guid: 3c01341f880965346ade298c58742252, type: 3}
+  - name: Spirito Bomba
+    description: criatura corrompida com a habilidade de explodir e causar muito
+      dano.
+    image: {fileID: 21300000, guid: 5888eff1a35fa1a4697111377751cebd, type: 3}
+  - name: abatedor
+    description: criatura corrimpida que persegue e ataca ao te encontrar.
+    image: {fileID: 21300000, guid: 0288a8d873e088143b68a36be9e92ee7, type: 3}
+  - name: atirador
+    description: criatura corrimpida que persegue e dispara flechas ao te encontrar.
+    image: {fileID: 21300000, guid: e220eefc03e67754a8d3a22acd869851, type: 3}
+  - name: Golias
+    description: Criatura gigante que vaga e persegue ao te encontrar.
+    image: {fileID: 21300000, guid: 97cca54587ecd3643922914afaa13e5f, type: 3}
+  - name: Saci
+    description: "jovem de uma perna s\xF3 com carapu\xE7a sobre a cabe\xE7a que
+      lhe concede poderes m\xE1gicos."
+    image: {fileID: 21300000, guid: 72664b0162be3d44eb7ac0b30da5ca4f, type: 3}
+  - name: Curupira
+    description: "guardi\xE3o da floresta e por punir aqueles que entram nela para
+      derrubar \xE1rvores."
+    image: {fileID: 21300000, guid: c5dd68eac06b06149a5b97854fe0fa52, type: 3}
